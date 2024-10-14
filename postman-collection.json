@@ -1,0 +1,884 @@
+{
+  "info": {
+    "_postman_id": "d9a94329-e2be-418b-bc75-694ff45bed10",
+    "name": "chillka-backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "30654257"
+  },
+  "item": [
+    {
+      "name": "cancel activity by Id",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/auth/activities/665d19b812b31b3aae335a25/cancel",
+          "host": ["{{HOST}}"],
+          "path": [
+            "api",
+            "auth",
+            "activities",
+            "665d19b812b31b3aae335a25",
+            "cancel"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "cancel order by Id",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/auth/orders/665c1e0affc1af0d081e89c1/cancel",
+          "host": ["{{HOST}}"],
+          "path": [
+            "api",
+            "auth",
+            "orders",
+            "665c1e0affc1af0d081e89c1",
+            "cancel"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "change password",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "\r",
+              "if(pm.response.code === 200) {\r",
+              "    pm.environment.set('session',pm.response.json().token)\r",
+              "}"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"password\": \"north9Hex\",\r\n    \"confirmPassword\": \"north9Hex\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/auth/change-password",
+          "host": ["{{HOST}}"],
+          "path": ["api", "auth", "change-password"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "collect activity",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/auth/saved-activities/6656db2b511dba0998741e18",
+          "host": ["{{HOST}}"],
+          "path": [
+            "api",
+            "auth",
+            "saved-activities",
+            "6656db2b511dba0998741e18"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create activity",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Miss Kelly Dare\",\r\n    \"organizer\": {\r\n        \"profilePicture\": \"https://loremflickr.com/640/480?lock=7694210111111168\",\r\n        \"name\": \"Mr. Alan Jerde\",\r\n        \"contactName\": \"Leona Spencer\",\r\n        \"contactPhone\": \"244.960.8178 x08518\",\r\n        \"contactEmail\": \"Bell.Nitzsche@gmail.com\",\r\n        \"websiteName\": \"these-human.org\",\r\n        \"websiteURL\": \"https://peaceful-plier.org/\"\r\n    },\r\n    \"cover\": [\r\n        \"https://loremflickr.com/640/480?lock=445309626875904\",\r\n        \"https://loremflickr.com/640/480?lock=7701584716759040\",\r\n        \"https://loremflickr.com/640/480?lock=8167749635276800\"\r\n    ],\r\n    \"thumbnail\": \"https://loremflickr.com/640/480?lock=7914678927753216\",\r\n    \"startDateTime\": \"2024-04-24T16:51:30.302Z\",\r\n    \"fromToday\": false,\r\n    \"endDateTime\": \"2024-07-19T17:12:03.234Z\",\r\n    \"noEndDate\": false,\r\n    \"category\": \"藝術文化\",\r\n    \"type\": \"線上\",\r\n    \"link\": \"https://defensive-mineshaft.net\",\r\n    \"location\": \"北部\",\r\n    \"address\": \"8412 Albany Road\",\r\n    \"summary\": \"Bestia desidero comprehendo votum attollo aggero.\",\r\n    \"details\": \"Urbanus abstergo vitiosus ipsum patria coaegresco. Derideo approbo valde vigilo odit torrens curriculum ocer vitae. Degero vergo vespillo adinventitias blandior beneficium abduco.\",\r\n    \"isPrivate\": false,\r\n    \"displayRemainingTickets\": false,\r\n    \"isRecurring\": true,\r\n    \"recurring\": {\r\n        \"period\": \"每月\",\r\n        \"week\": \"每週\",\r\n        \"day\": \"星期六\"\r\n    },\r\n    \"status\": \"有效\",\r\n    \"tickets\": [\r\n        {\r\n            \"name\": \"VIP星空露營體驗券\",\r\n            \"price\": 1200,\r\n            \"startDateTIme\": \"2024-03-28T00:00:30.302Z\",\r\n            \"fromToday\": false,\r\n            \"endDateTIme\": \"2024-03-29T00:00:03.234Z\",\r\n            \"noEndDate\": false,\r\n            \"participantCapacity\": 20,\r\n            \"unlimitedQuantity\": false,\r\n            \"purchaseLimit\": 1,\r\n            \"description\": \"這張星空冒險導覽套票包含專屬導覽、望遠鏡租借和美食饗宴，帶您進入星空的奇妙世界。\",\r\n            \"purchaseDuplicate\": false\r\n        },\r\n        {\r\n            \"name\": \"星空夜行免費入場券\",\r\n            \"price\": 500,\r\n            \"startDateTIme\": \"2024-05-24T16:51:30.302Z\",\r\n            \"fromToday\": false,\r\n            \"endDateTIme\": \"2024-10-19T17:12:03.234Z\",\r\n            \"noEndDate\": false,\r\n            \"participantCapacity\": 43,\r\n            \"unlimitedQuantity\": true,\r\n            \"purchaseLimit\": 1,\r\n            \"description\": \"這張星空冒險導覽套票包含專屬導覽、望遠鏡租借和美食饗宴，帶您進入星空的奇妙世界。\",\r\n            \"purchaseDuplicate\": false\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/auth/activities",
+          "host": ["{{HOST}}"],
+          "path": ["api", "auth", "activities"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create mock activity",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{HOST}}/api/mock-activity?limit=100",
+          "host": ["{{HOST}}"],
+          "path": ["api", "mock-activity"],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create mock data",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{HOST}}/api/mock-data",
+          "host": ["{{HOST}}"],
+          "path": ["api", "mock-data"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create questions",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"type\": \"回覆\",\r\n    \"content\": \"reply2\",\r\n    \"questionId\": \"6667b94392675f737af4e43c\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/auth/activities/665d19b812b31b3aae335a25/questions",
+          "host": ["{{HOST}}"],
+          "path": [
+            "api",
+            "auth",
+            "activities",
+            "665d19b812b31b3aae335a25",
+            "questions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete questions",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"questionId\": \"6667b94692675f737af4e441\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/auth/activities/6667b94692675f737af4e441/questions",
+          "host": ["{{HOST}}"],
+          "path": [
+            "api",
+            "auth",
+            "activities",
+            "6667b94692675f737af4e441",
+            "questions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "edit activities",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Miss Kelly Dare\",\r\n    \"organizer\": {\r\n        \"profilePicture\": \"https://loremflickr.com/640/480?lock=7694210111111168\",\r\n        \"name\": \"Mr. Alan Jerde\",\r\n        \"contactName\": \"Leona Spencer\",\r\n        \"contactPhone\": \"244.960.8178 x08518\",\r\n        \"contactEmail\": \"Bell.Nitzsche@gmail.com\",\r\n        \"websiteName\": \"these-human.org\",\r\n        \"websiteURL\": \"https://peaceful-plier.org/\"\r\n    },\r\n    \"cover\": [\r\n        \"https://loremflickr.com/640/480?lock=445309626875904\",\r\n        \"https://loremflickr.com/640/480?lock=7701584716759040\",\r\n        \"https://loremflickr.com/640/480?lock=8167749635276800\"\r\n    ],\r\n    \"thumbnail\": \"https://loremflickr.com/640/480?lock=7914678927753216\",\r\n    \"startDateTIme\": \"2024-05-24T16:51:30.302Z\",\r\n    \"fromToday\": false,\r\n    \"endDateTIme\": \"2024-10-19T17:12:03.234Z\",\r\n    \"noEndDate\": false,\r\n    \"category\": \"藝術文化\",\r\n    \"type\": \"線上\",\r\n    \"link\": \"https://defensive-mineshaft.net\",\r\n    \"location\": \"北部\",\r\n    \"address\": \"8412 Albany Road\",\r\n    \"summary\": \"Bestia desidero comprehendo votum attollo aggero.\",\r\n    \"details\": \"Urbanus abstergo vitiosus ipsum patria coaegresco. Derideo approbo valde vigilo odit torrens curriculum ocer vitae. Degero vergo vespillo adinventitias blandior beneficium abduco.\",\r\n    \"isPrivate\": false,\r\n    \"displayRemainingTickets\": false,\r\n    \"isRecurring\": true,\r\n    \"recurring\": {\r\n        \"period\": \"每月\",\r\n        \"week\": \"每週\",\r\n        \"day\": \"星期六\"\r\n    },\r\n    \"status\": \"有效\",\r\n    \"tickets\": [\r\n        {\r\n            \"_id\": \"665d19b812b31b3aae335a28\",\r\n            \"name\": \"VIP星空露營體驗券\",\r\n            \"price\": 1200,\r\n            \"startDateTIme\": \"2024-03-28T00:00:30.302Z\",\r\n            \"fromToday\": false,\r\n            \"endDateTIme\": \"2024-03-29T00:00:03.234Z\",\r\n            \"noEndDate\": false,\r\n            \"participantCapacity\": 20,\r\n            \"unlimitedQuantity\": false,\r\n            \"purchaseLimit\": 1,\r\n            \"description\": \"這張星空冒險導覽套票包含專屬導覽、望遠鏡租借和美食饗宴，帶您進入星空的奇妙世界。\",\r\n            \"purchaseDuplicate\": false\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/auth/activities/665d19b812b31b3aae335a25",
+          "host": ["{{HOST}}"],
+          "path": ["api", "auth", "activities", "665d19b812b31b3aae335a25"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "edit questions",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"questionId\": \"6667b94092675f737af4e437\",\r\n    \"content\": \"test\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/auth/activities/665d19b812b31b3aae335a25/questions",
+          "host": ["{{HOST}}"],
+          "path": [
+            "api",
+            "auth",
+            "activities",
+            "665d19b812b31b3aae335a25",
+            "questions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get activities",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{HOST}}/api/auth/activities",
+          "host": ["{{HOST}}"],
+          "path": ["api", "auth", "activities"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get activitiy detail",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{HOST}}/api/activities/6676c7c555888d99a07f36fa?userId=6672e8abc5f9dd90c6e0a7cc",
+          "host": ["{{HOST}}"],
+          "path": ["api", "activities", "6676c7c555888d99a07f36fa"],
+          "query": [
+            {
+              "key": "userId",
+              "value": "6672e8abc5f9dd90c6e0a7cc"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get activity participant list",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{HOST}}/api/auth/activities/6652e1f0e15385975e5cb478/participants?participantName=chillka&limit=&page=",
+          "host": ["{{HOST}}"],
+          "path": [
+            "api",
+            "auth",
+            "activities",
+            "6652e1f0e15385975e5cb478",
+            "participants"
+          ],
+          "query": [
+            {
+              "key": "participantName",
+              "value": "chillka"
+            },
+            {
+              "key": "limit",
+              "value": ""
+            },
+            {
+              "key": "page",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get comments",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{HOST}}/api/activities/comments",
+          "host": ["{{HOST}}"],
+          "path": ["api", "activities", "comments"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get participant list",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{HOST}}/api/auth/activities/:activityId/participants",
+          "host": ["{{HOST}}"],
+          "path": ["api", "auth", "activities", ":activityId", "participants"],
+          "variable": [
+            {
+              "key": "activityId",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get popular keywords",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{HOST}}/api/activities/popular-keywords",
+          "host": ["{{HOST}}"],
+          "path": ["api", "activities", "popular-keywords"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get recommend activities",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{HOST}}/api/activities/recommend",
+          "host": ["{{HOST}}"],
+          "path": ["api", "activities", "recommend"],
+          "query": [
+            {
+              "key": "userId",
+              "value": "6656060a066cd51095906678",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get saved - activities list",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "disabled": true
+          }
+        ],
+        "url": {
+          "raw": "{{HOST}}/api/auth/saved-activities",
+          "host": ["{{HOST}}"],
+          "path": ["api", "auth", "saved-activities"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get search activities",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "disabled": true
+          }
+        ],
+        "url": {
+          "raw": "{{HOST}}/api/activities",
+          "host": ["{{HOST}}"],
+          "path": ["api", "activities"],
+          "query": [
+            {
+              "key": "keyword",
+              "value": "Dr",
+              "disabled": true
+            },
+            {
+              "key": "location",
+              "value": "中部",
+              "disabled": true
+            },
+            {
+              "key": "category",
+              "value": "戶外踏青",
+              "disabled": true
+            },
+            {
+              "key": "type",
+              "value": "線上",
+              "disabled": true
+            },
+            {
+              "key": "date",
+              "value": "下一週",
+              "disabled": true
+            },
+            {
+              "key": "sort",
+              "value": "日期",
+              "disabled": true
+            },
+            {
+              "key": "distance",
+              "value": "10000",
+              "disabled": true
+            },
+            {
+              "key": "lat",
+              "value": "2.5403",
+              "disabled": true
+            },
+            {
+              "key": "lng",
+              "value": "92.5161",
+              "disabled": true
+            },
+            {
+              "key": "page",
+              "value": "1",
+              "disabled": true
+            },
+            {
+              "key": "limit",
+              "value": "3",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get orders",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{HOST}}/api/auth/orders",
+          "host": ["{{HOST}}"],
+          "path": ["api", "auth", "orders"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get user by Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{HOST}}/api/auth/user/664b48393b749fac7df86816",
+          "host": ["{{HOST}}"],
+          "path": ["api", "auth", "user", "664b48393b749fac7df86816"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "\r",
+              "if(pm.response.code === 200) {\r",
+              "    pm.environment.set('session',pm.response.json().token)\r",
+              "}"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"chillka.offical@gmail.com\",\r\n    \"password\": \"north9Hex\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/login",
+          "host": ["{{HOST}}"],
+          "path": ["api", "login"],
+          "query": [
+            {
+              "key": "HOST",
+              "value": "",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "logout - just for postman test",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": ["pm.environment.set('session',null)"],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [""],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/logout",
+          "host": ["{{HOST}}"],
+          "path": ["api", "logout"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "post payment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"activityId\": \"6671a202d3004a6ac06647e6\",\r\n    \"ticketId\": \"6671a202d3004a6ac06647ea\",\r\n    \"orderContact\": {\r\n        \"name\": \"chillka\",\r\n        \"email\": \"chillka.offical@gmail.com\",\r\n        \"phone\": \"1234567\"\r\n    },\r\n    \"payment\": {\r\n        \"amount\": \"123\",\r\n        \"orderNumber\": 0\r\n    },\r\n    \"itemName\": \"Miss Kelly Dare\",\r\n    \"tradeDesc\": \"Bestia desidero comprehendo votum attollo aggero.\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/auth/payment",
+          "host": ["{{HOST}}"],
+          "path": ["api", "auth", "payment"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"displayName\": \"chillka\",\r\n    \"email\": \"chillka.offical@gmail.com\",\r\n    \"password\": \"north9Hex\",\r\n    \"confirmPassword\": \"north9Hex\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/register",
+          "host": ["{{HOST}}"],
+          "path": ["api", "register"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "reset password - send email",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"chillka.offical@gmail.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/reset-password",
+          "host": ["{{HOST}}"],
+          "path": ["api", "reset-password"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "reset password - set password",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjRiNDgzOTNiNzQ5ZmFjN2RmODY4MTYiLCJkaXNwbGF5TmFtZSI6ImNoaWxsa2EiLCJlbWFpbCI6ImNoaWxsa2Eub2ZmaWNhbEBnbWFpbC5jb20iLCJpYXQiOjE3MTY2MjM2MDIsImV4cCI6MTcxNjcxMDAwMn0.RzAxiEBTccz_I6MMY6G59gCmPGbRt9HffLgwyHgtxSQ\",\r\n    \"password\": \"north9Hex123\",\r\n    \"confirmPassword\": \"north9Hex123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/reset-password",
+          "host": ["{{HOST}}"],
+          "path": ["api", "reset-password"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "upload images",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [""],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": "/C:/Users/lazys/Downloads/elpotqzhtnnjdpfmmulb.png"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "src": "/C:/Users/lazys/Downloads/nmlstwhc29zojmshg3bj.jpg"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "src": "/C:/Users/lazys/Downloads/rz5dy5u5tyztiyzxtur1.jpg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{HOST}}/api/auth/upload-images",
+          "host": ["{{HOST}}"],
+          "path": ["api", "auth", "upload-images"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "use orders serial number",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [""],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"serialNumber\": \"0f8f643c-3fae-4324-9d0d-9b5d00b9b00e\"\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/auth/orders/use-serial-number",
+          "host": ["{{HOST}}"],
+          "path": ["api", "auth", "orders", "use-serial-number"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "verify email - send email",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"chillka.offical@gmail.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/verify-email",
+          "host": ["{{HOST}}"],
+          "path": ["api", "verify-email"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "verify email - set email validate",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{HOST}}/api/verify-email?validateCode=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjRiNDgzOTNiNzQ5ZmFjN2RmODY4MTYiLCJkaXNwbGF5TmFtZSI6ImNoaWxsa2EiLCJlbWFpbCI6ImNoaWxsa2Eub2ZmaWNhbEBnbWFpbC5jb20iLCJpYXQiOjE3MTYzNTA0MjAsImV4cCI6MTcxNjQzNjgyMH0.NAyT7HA20Hi5WI_zUfiyO3QR_C_BtHC0A7UCs0rJkys",
+          "host": ["{{HOST}}"],
+          "path": ["api", "verify-email"],
+          "query": [
+            {
+              "key": "validateCode",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjRiNDgzOTNiNzQ5ZmFjN2RmODY4MTYiLCJkaXNwbGF5TmFtZSI6ImNoaWxsa2EiLCJlbWFpbCI6ImNoaWxsa2Eub2ZmaWNhbEBnbWFpbC5jb20iLCJpYXQiOjE3MTYzNTA0MjAsImV4cCI6MTcxNjQzNjgyMH0.NAyT7HA20Hi5WI_zUfiyO3QR_C_BtHC0A7UCs0rJkys"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{session}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [""]
+      }
+    }
+  ]
+}

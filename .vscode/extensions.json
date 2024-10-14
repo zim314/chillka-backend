@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "rvest.vs-code-prettier-eslint",
+    "editorconfig.editorconfig",
+    "henrynguyen5-vsc.vsc-nvm"
+  ]
+}
